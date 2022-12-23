@@ -26,6 +26,11 @@ const ImageGallery = styled.div`
     // snap to center
     scroll-snap-align: center;
   }
+
+  span {
+    position: absolute;
+    font-size: 13px;
+  }
 `;
 
 const ProductDescriptionWrapper = styled.div`
@@ -96,6 +101,7 @@ function App() {
   return (
     <div className="App">
       <ImageGallery>
+        <span>Swipe to see more photos</span>
         {/*// @ts-ignore*/}
         {x.dalle_images.map((photo) => {
           return <img src={photo} alt="tmp" />;
